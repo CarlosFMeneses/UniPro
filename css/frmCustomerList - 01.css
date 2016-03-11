@@ -1,0 +1,58 @@
+/* 
+    Created on : Mar 8, 2016, 3:23:31 PM
+    Author     : Carlos F. Meneses
+*/
+
+form {
+  margin: 0;
+  padding: 0;
+  min-width: 500px;
+  max-width: 1200px;
+  /*
+  width: 560px;
+  border-style: solid;
+  */
+}
+
+form fieldset {
+  border-color: #000;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+form fieldset legend {
+	font-size:1.1em; 
+}
+
+form label { 
+	display: block;
+	float: left; 
+	width: 150px; 
+	padding: 0; 
+	margin: 5px 0 0;
+	text-align: right; 
+}
+
+form input, select {
+	width:auto;
+	margin:5px 0 0 10px;
+}
+
+form br {
+	clear:left;
+}
+
+div.column{
+    /*
+    border-style: solid;
+    */
+    float: left;
+    margin-right: 10px;
+}
+
+h1 {
+    clear: both;
+}

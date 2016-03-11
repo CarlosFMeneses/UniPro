@@ -1,0 +1,99 @@
+/* 
+    Created on : Mar 8, 2016, 3:23:31 PM
+    Author     : Carlos F. Meneses
+*/
+
+form {
+  margin: 0;
+  padding: 0;
+  min-width: 500px;
+  max-width: 1200px;
+  /*
+  width: 560px;
+  border-style: solid;
+  */
+}
+
+form fieldset {
+  border-color: #000;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+form fieldset legend {
+	font-size:1.1em; 
+}
+
+form label { 
+	display: block;
+	float: left; 
+	width: 8em; 
+	padding: 0; 
+	margin: .25em .5em .25em 0;
+	text-align: right; 
+}
+
+form input, select {
+  font-family: monospace;
+	width: 0em;
+	margin: .5em 0 0 0;
+}
+
+form br {
+	clear:left;
+}
+
+button {
+  font-size: .66em;
+  padding: .12em;
+}
+
+div.column{
+    /*
+    border-style: solid;
+    */
+    float: left;
+    margin-right: 10px;
+}
+
+h1 {
+    clear: both;
+}
+
+input.name, select.name {
+  width: 20em;
+}
+
+input.city, select.city {
+  width: 12em;
+}
+
+input.state, select.state {
+  width: 3em;
+}
+
+input.zip, select.zip {
+  width: 4em;
+}
+
+input.phone, select.phone {
+  width: 9em;
+}
+
+input.ssWidth, select.ssWidth {
+  width: 3em;
+}
+
+input.sWidth, select.sWidth {
+  width: 5em;
+}
+input.mWidth, select.mWidth {
+  width: 10em;
+}
+
+input.lWidth, select.lWidth {
+  width: 20em;
+}
