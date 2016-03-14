@@ -64,30 +64,30 @@
 
                     <div class="column">
                         <label for="AccountStatus">Acct Status</label>
-                        <select class="req" id="AccountStatus" name="AccountStatus" data-default="a" data-dd-val="%cpp_PB.AccountStatus%">
+                        <select class="sWidth req" id="AccountStatus" name="AccountStatus" data-default="a" data-dd-val="%cpp_PB.AccountStatus%">
                             <option value="a" selected>Active</option>
                             <option value="h">Hold</option>
                             <option value="b">Blocked</option>
                         </select><br>
 
                         <label for="UserType">User Type</label>
-                        <select class="req" id="UserType" name="UserType" data-default="customer" data-dd-val="%cpp_PB.UserType%">
+                        <select class=sWidth req" id="UserType" name="UserType" data-default="customer" data-dd-val="%cpp_PB.UserType%">
                             <option value="acctMain">AcctMain</option>
                             <option value="salesRep">SalesRep</option>
                             <option value="customer" selected>Customer</option>
                         </select><br>
 
                         <label for="AccountType">Account Type</label>
-                        <select class="req" id="AccountType" name="AccountType" data-default="corpAcc" data-dd-val="%cpp_PB.AccountType%">
+                        <select class="sWidth req" id="AccountType" name="AccountType" data-default="corpAcc" data-dd-val="%cpp_PB.AccountType%">
                             <option value="publicAcct">PublicAcct</option>
-                            <option value="corpAcc" selected>CorpAcc</option>
+                            <option value="corpAcct" selected>CorpAcct</option>
                             <option value="empStore">EmpStore</option>
                         </select>
                     </div>
                     
                     <div class="column">
                         <label for="CustLogoImage">Logo</label>
-                        <select class="req" id="CustLogoImage" name="CustLogoImage" data-dd-val="%cpp_PB.CustLogoImage%">
+                        <select class="mWidth req" id="CustLogoImage" name="CustLogoImage" data-dd-val="%cpp_PB.CustLogoImage%">
                             <option value="">Select Logo</option>
                             %cpp_DD.CustLogoImage%
                         </select>
@@ -96,7 +96,7 @@
                         </button><br>
 
                         <label for="LinkedFromAccount">Linked From Account</label>
-                        <select class="req" id="LinkedFromAccount" name="LinkedFromAccount" data-dd-val="%cpp_PB.LinkedFromAccount%">
+                        <select class="mWidth req" id="LinkedFromAccount" name="LinkedFromAccount" data-dd-val="%cpp_PB.LinkedFromAccount%">
                             <option value="">Select Linked Account</option>
                             %cpp_DD.LinkedFromAccount%
                         </select>
@@ -189,7 +189,7 @@
                     </button><br>
                 
                     <label for="CustReqSecureConnection">Require Secure Connection</label>
-                    <select class="req" id="CustReqSecureConnection" name="CustReqSecureConnection" data-default="2" data-dd-val="%cpp_PB.CustReqSecureConnection%">
+                    <select class="ssWidth req" id="CustReqSecureConnection" name="CustReqSecureConnection" data-default="2" data-dd-val="%cpp_PB.CustReqSecureConnection%">
                         <option value="2" selected>No</option>
                         <option value="3">Yes</option>
                     </select>
@@ -200,77 +200,77 @@
                 <fieldset>
                     <legend>Payment Settings</legend>
                     <label for="PaymentTerms">Pmt. Method</label>
-                    <select class="req" id="PaymentTerms" name="PaymentTerms" data-default="acct" data-dd-val="%cpp_PB.PaymentTerms%">
+                    <select class="ssWidth req" id="PaymentTerms" name="PaymentTerms" data-default="acct" data-dd-val="%cpp_PB.PaymentTerms%">
                         <option value="cc">CC</option>
                         <option value="acct" selected>Acct</option>
                         <option value="cod">COD</option>
                     </select><br>
                     
                     <label for="CCOptional">CC. Optional</label>
-                    <select class="req" id="CCOptional" name="CCOptional" data-default="1" data-dd-val="%cpp_PB.CCOptional%">
+                    <select class="ssWidth req" id="CCOptional" name="CCOptional" data-default="1" data-dd-val="%cpp_PB.CCOptional%">
                         <option value="1" selected>Yes</option>
                         <option value="0">No</option>
                     </select><br>
                     
                     <label for="PmtOptionDefault">PmtOpt Defl't</label>
-                    <select class="req" id="PmtOptionDefault" name="PmtOptionDefault" data-default="cc" data-dd-val="%cpp_PB.PmtOptionDefault%">
+                    <select class="ssWidth req" id="PmtOptionDefault" name="PmtOptionDefault" data-default="cc" data-dd-val="%cpp_PB.PmtOptionDefault%">
                         <option value="po">PO</option>
                         <option value="cc" selected>CC</option>
                     </select><br>
                     
                     <label for="CCSameAsBilling">CC Billing same as Acct</label>
-                    <select class="req" id="CCSameAsBilling" name="CCSameAsBilling" data-default="1" data-dd-val="%cpp_PB.CCSameAsBilling%">
+                    <select class="ssWidth req" id="CCSameAsBilling" name="CCSameAsBilling" data-default="1" data-dd-val="%cpp_PB.CCSameAsBilling%">
                         <option value="1" selected>Yes</option>
                         <option value="0">No</option>
                     </select><br>
                     
-                    <input type="text" class="req" id="an_num" value="%cpp_PB.an_num%" name="an_num">
+                    <input type="text" class="sWidth req" id="an_num" value="%cpp_PB.an_num%" name="an_num">
                 </fieldset>
                 
                 <fieldset>
                     <legend>Price Settings</legend>
                     <label for="CustomPriceList">Price List</label>
-                    <select class="req" id="CustomPriceList" name="CustomPriceList" data-dd-val="%cpp_PB.CustomPriceList%">
+                    <select class="mWidth req" id="CustomPriceList" name="CustomPriceList" data-dd-val="%cpp_PB.CustomPriceList%">
                         <option value="">Select Price List</option>
                         %cpp_DD.CustomPriceList%
                     </select>
-                    <button type="button" class="req" id="cmdNewPriceList" name="cmdNewPriceList" tabindex="-1" onclick="alert('To come')">
+                    <button type="button" class="mWidth req" id="cmdNewPriceList" name="cmdNewPriceList" tabindex="-1" onclick="alert('To come')">
                         New
                     </button><br>
                     
                     <label for="PriceListIconMsg">Contract Msg</label>
-                    <input type="text" class="req" id="PriceListIconMsg" value="%cpp_PB.PriceListIconMsg%" name="PriceListIconMsg"><br>
+                    <input type="text" class="mWidth req" id="PriceListIconMsg" value="%cpp_PB.PriceListIconMsg%" name="PriceListIconMsg"><br>
                     
                     <label for="NonContractMsg">Non Contract</label>
-                    <input type="text" class="req" id="NonContractMsg" value="%cpp_PB.NonContractMsg%" name="NonContractMsg"><br>
+                    <input type="text" class="mWidth req" id="NonContractMsg" value="%cpp_PB.NonContractMsg%" name="NonContractMsg"><br>
                     
                     <label for="PriceLevel">Price Level</label>
-                    <select class="req" id="PriceLevel" name="PriceLevel" data-default="a" data-dd-val="%cpp_PB.PriceLevel%">
+                    <select class="ssWidth req" id="PriceLevel" name="PriceLevel" data-default="a" data-dd-val="%cpp_PB.PriceLevel%">
                         <option value="a" selected>a</option>
                         <option value="b">b</option>
                         <option value="p">p</option>
                     </select><br>
                     
                     <label for="ShowPriceListBtn">Show Btn</label>
-                    <select class="req" id="ShowPriceListBtn" name="ShowPriceListBtn" data-default="0" data-dd-val="%cpp_PB.ShowPriceListBtn%">
+                    <select class="ssWidth req" id="ShowPriceListBtn" name="ShowPriceListBtn" data-default="0" data-dd-val="%cpp_PB.ShowPriceListBtn%">
                         <option value="1">Yes</option>
                         <option value="2" selected>No</option>
                     </select><br>
                     
                     <label for="DiscountOnWeb">Discount</label>
-                    <input type="text" class="req" id="DiscountOnWeb" value="%cpp_PB.DiscountOnWeb%" name="DiscountOnWeb">
+                    <input type="text" class="ssWidth req" id="DiscountOnWeb" value="%cpp_PB.DiscountOnWeb%" name="DiscountOnWeb">
                 </fieldset>
                 
                 <fieldset>
                     <legend>Other Settings</legend>
                     <label for="AlternateLookUp">Alternate Look Up (e.g. NY@Customer)</label>
-                    <input type="text" class="req" id="AlternateLookUp" value="%cpp_PB.AlternateLookUp%" name="AlternateLookUp"><br>
+                    <input type="text" class="lWidth req" id="AlternateLookUp" value="%cpp_PB.AlternateLookUp%" name="AlternateLookUp"><br>
                     
                     <label for="ContactTitle">Acct Title</label>
-                    <input type="text" class="req" id="ContactTitle" value="%cpp_PB.ContactTitle%" name="ContactTitle"><br>
+                    <input type="text" class="mWidth req" id="ContactTitle" value="%cpp_PB.ContactTitle%" name="ContactTitle"><br>
                     
                     <label for="EmailCopyOfOrderTo">Email Copy Of Order To</label>
-                    <input type="text" class="req" id="EmailCopyOfOrderTo" value="%cpp_PB.EmailCopyOfOrderTo%" name="EmailCopyOfOrderTo">
+                    <input type="text" class="lWidth req" id="EmailCopyOfOrderTo" value="%cpp_PB.EmailCopyOfOrderTo%" name="EmailCopyOfOrderTo">
                 </fieldset>
             </form>
         </div>
@@ -281,43 +281,43 @@
                 <fieldset>
                     <legend>Line Item Settings</legend>
                     <label for="Use_fldEmployee">Show Employee Fld.</label>
-                    <select class="req" id="Use_fldEmployee" name="Use_fldEmployee" data-default="block" data-dd-val="%cpp_PB.Use_fldEmployee%">
+                    <select class="ssWidth req" id="Use_fldEmployee" name="Use_fldEmployee" data-default="block" data-dd-val="%cpp_PB.Use_fldEmployee%">
                         <option value="block" selected>Yes</option>
                         <option value="none">No</option>
                     </select><br>
 
                     <label for="sort_orderforms_by">Require Employee</label>
-                    <select class="req" id="sort_orderforms_by" name="sort_orderforms_by" data-default="no" data-dd-val="%cpp_PB.sort_orderforms_by%">
+                    <select class="ssWidth req" id="sort_orderforms_by" name="sort_orderforms_by" data-default="no" data-dd-val="%cpp_PB.sort_orderforms_by%">
                         <option value="yes" >Yes</option>
                         <option value="no" selected>No</option>
                     </select><br>
 
                     <label for="EmployeeFromListOnly">Empl'yee From List Only</label>
-                    <select class="req" id="EmployeeFromListOnly" name="EmployeeFromListOnly" data-default="2" data-dd-val="%cpp_PB.EmployeeFromListOnly%">
+                    <select class="ssWidth req" id="EmployeeFromListOnly" name="EmployeeFromListOnly" data-default="2" data-dd-val="%cpp_PB.EmployeeFromListOnly%">
                         <option value="2" selected>No</option>
                         <option value="1">Yes</option>
                     </select><br>
 
                     <label for="sort_orderforms_by">Require Ref Field</label>
-                    <select class="req" id="sort_orderforms_by" name="sort_orderforms_by" data-default="2" data-dd-val="%cpp_PB.sort_orderforms_by%">
+                    <select class="ssWidth req" id="sort_orderforms_by" name="sort_orderforms_by" data-default="2" data-dd-val="%cpp_PB.sort_orderforms_by%">
                         <option value="1" >Yes</option>
                         <option value="2" selected>No</option>
                     </select><br>
 
                     <label for="ReqRefInOrderLineCaption">Ref Caption</label>
-                    <input type="text" class="req" id="ReqRefInOrderLineCaption" value="%cpp_PB.ReqRefInOrderLineCaption%" name="ReqRefInOrderLineCaption"><br>
+                    <input type="text" class="sWidth req" id="ReqRefInOrderLineCaption" value="%cpp_PB.ReqRefInOrderLineCaption%" name="ReqRefInOrderLineCaption"><br>
 
                     <label for="ReqRefInOrderLineFromList">Ref From List</label>
-                    <select class="req" id="ReqRefInOrderLineFromList" name="ReqRefInOrderLineFromList" data-default="2" data-dd-val="%cpp_PB.ReqRefInOrderLineFromList%">
+                    <select class="ssWidth req" id="ReqRefInOrderLineFromList" name="ReqRefInOrderLineFromList" data-default="2" data-dd-val="%cpp_PB.ReqRefInOrderLineFromList%">
                         <option value="2" selected>No</option>
                         <option value="1">Yes</option>
                     </select><br>
 
                     <label for="ReqRefInOrderLineFromat">Ref Format</label>
-                    <input type="text" class="req" id="ReqRefInOrderLineFromat" value="%cpp_PB.ReqRefInOrderLineFromat%" name="ReqRefInOrderLineFromat"><br>
+                    <input type="text" class="sWidth req" id="ReqRefInOrderLineFromat" value="%cpp_PB.ReqRefInOrderLineFromat%" name="ReqRefInOrderLineFromat"><br>
 
                     <label for="Use_fldNote">Show Note Field</label>
-                    <select class="req" id="Use_fldNote" name="Use_fldNote" data-default="block" data-dd-val="%cpp_PB.Use_fldNote%">
+                    <select class="ssWidth req" id="Use_fldNote" name="Use_fldNote" data-default="block" data-dd-val="%cpp_PB.Use_fldNote%">
                         <option value="block" selected>Yes</option>
                         <option value="none">No</option>
                     </select>
@@ -326,28 +326,28 @@
                 <fieldset>
                     <legend>User Permissions</legend>
                     <label for="PhoneBookCustom10">Allow Catalog Order</label>
-                    <select class="req" id="PhoneBookCustom10" name="PhoneBookCustom10" data-default="no" data-dd-val="%cpp_PB.PhoneBookCustom10%">
+                    <select class="ssWidth req" id="PhoneBookCustom10" name="PhoneBookCustom10" data-default="no" data-dd-val="%cpp_PB.PhoneBookCustom10%">
                         <option value="yes" selected>Yes</option>
                         <option value="no" >No</option>
                     </select><br>
 
                     <label for="RestrictCatalogOrderMsg">Catalog Restrictcion Msg</label>
-                    <input type="text" class="req" id="RestrictCatalogOrderMsg" value="%cpp_PB.RestrictCatalogOrderMsg%" name="RestrictCatalogOrderMsg"><br>
+                    <input type="text" class="mWidth req" id="RestrictCatalogOrderMsg" value="%cpp_PB.RestrictCatalogOrderMsg%" name="RestrictCatalogOrderMsg"><br>
 
                     <label for="AllowCustomizationInCat">Allow Customizations in Catalog</label>
-                    <select class="req" id="AllowCustomizationInCat" name="AllowCustomizationInCat" data-default="0" data-dd-val="%cpp_PB.AllowCustomizationInCat%">
+                    <select class="ssWidth req" id="AllowCustomizationInCat" name="AllowCustomizationInCat" data-default="0" data-dd-val="%cpp_PB.AllowCustomizationInCat%">
                         <option value="1">Yes</option>
                         <option value="0" selected>No</option>
                     </select><br>
 
                     <label for="AllowCustomizationChange">Allow Customization Change</label>
-                    <select class="req" id="AllowCustomizationChange" name="AllowCustomizationChange" data-default="1" data-dd-val="%cpp_PB.AllowCustomizationChange%">
+                    <select class="ssWidth req" id="AllowCustomizationChange" name="AllowCustomizationChange" data-default="1" data-dd-val="%cpp_PB.AllowCustomizationChange%">
                         <option value="1" selected>Yes</option>
                         <option value="0">No</option>
                     </select><br>
 
                     <label for="AllowCstmzListForAllItems">Customization List For All lItems</label>
-                    <select class="req" id="AllowCstmzListForAllItems" name="AllowCstmzListForAllItems" data-default="1" data-dd-val="%cpp_PB.AllowCstmzListForAllItems%">
+                    <select class="ssWidth req" id="AllowCstmzListForAllItems" name="AllowCstmzListForAllItems" data-default="1" data-dd-val="%cpp_PB.AllowCstmzListForAllItems%">
                         <option value="1" selected>Yes</option>
                         <option value="0">No</option>
                         <option value="3">Uniform List</option>
@@ -355,19 +355,19 @@
                     </select><br>
 
                     <label for="AlwaysRequireCstmzOpt">Always Require Cstmz Option</label>
-                    <select class="req" id="AlwaysRequireCstmzOpt" name="AlwaysRequireCstmzOpt" data-default="0" data-dd-val="%cpp_PB.AlwaysRequireCstmzOpt%">
+                    <select class="ssWidth req" id="AlwaysRequireCstmzOpt" name="AlwaysRequireCstmzOpt" data-default="0" data-dd-val="%cpp_PB.AlwaysRequireCstmzOpt%">
                         <option value="1">Yes</option>
                         <option value="0" selected>No</option>
                     </select><br>
 
                     <label for="RestrictCatalogHidePrices">Hide Prices Reg In Catalog</label>
-                    <select class="req" id="RestrictCatalogHidePrices" name="RestrictCatalogHidePrices" data-default="0" data-dd-val="%cpp_PB.RestrictCatalogHidePrices%">
+                    <select class="ssWidth req" id="RestrictCatalogHidePrices" name="RestrictCatalogHidePrices" data-default="0" data-dd-val="%cpp_PB.RestrictCatalogHidePrices%">
                         <option value="1">Yes</option>
                         <option value="0" selected>No</option>
                     </select><br>
 
                     <label for="CstmzHintInCatBrsr">Cstmz Hint In Catalog Browser</label>
-                    <select class="req" id="CstmzHintInCatBrsr" name="CstmzHintInCatBrsr" data-default="0" data-dd-val="%cpp_PB.CstmzHintInCatBrsr%">
+                    <select class="ssWidth req" id="CstmzHintInCatBrsr" name="CstmzHintInCatBrsr" data-default="0" data-dd-val="%cpp_PB.CstmzHintInCatBrsr%">
                         <option value="1">Yes</option>
                         <option value="0" selected>No</option>
                     </select>
@@ -376,7 +376,7 @@
                 <fieldset>
                     <legend>Free Shipping Settings</legend>
                     <label for="ShippingRulesID">Shipping Rules</label>
-                    <select class="req" id="ShippingRulesID" name="ShippingRulesID" data-dd-val="%cpp_PB.ShippingRulesID%">
+                    <select class="sWidth req" id="ShippingRulesID" name="ShippingRulesID" data-dd-val="%cpp_PB.ShippingRulesID%">
                         <option value="">Select Rule</option>
                         %cpp_DD.ShippingRulesID%
                     </select>
@@ -460,7 +460,7 @@
         </div>
         
         <div class="tab" id="budgetApprovals">
-            <h1>Budget & Approvals</h1>
+            <h1>Budget &amp; Approvals</h1>
             <form>
                 <fieldset>
                     <legend>Required Order Approvals</legend>
