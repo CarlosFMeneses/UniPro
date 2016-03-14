@@ -94,7 +94,4 @@ input.mWidth, select.mWidth {
   width: 10em;
 }
 
-input.lWidth, select.lWidth {
-  width: 20em;
-}
-/* GitHub commit test*/
+input.lWidth, select.lWidth {   width: 20em; } /* GitHub commit test*/
