@@ -23,7 +23,7 @@ fieldset {
 
 legend {
   font-family: 'Arial Rounded MT Bold';
-	font-size: 125%; 
+	font-size: 1.1em; 
 }
 
 label { 
@@ -38,6 +38,7 @@ label {
 
 input, select {
   font-family: 'Courier New';
+  font-size: .9em;
 	width: 0em;
 	margin: .5em 0 0 0;
 }
@@ -81,16 +82,16 @@ input.phone, select.phone {
 }
 
 input.ssWidth, select.ssWidth {
-  width: 3em;
+  width: 4em;
 }
 
 input.sWidth, select.sWidth {
-  width: 6em;
+  width: 8em;
 }
 input.mWidth, select.mWidth {
   width: 12em;
 }
 
 input.lWidth, select.lWidth {
-   width: 25em;
+   width: 20em;
 }
