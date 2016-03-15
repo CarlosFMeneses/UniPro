@@ -8,13 +8,11 @@ form {
   padding: 0;
   min-width: 500px;
   max-width: 1200px;
-  /*
-  width: 560px;
-  border-style: solid;
-  */
+  font-family: 'Arial';
+  font-size: 10pt;
 }
 
-form fieldset {
+fieldset {
   border-color: #000;
   border-width: 1px;
   border-style: solid;
@@ -23,21 +21,24 @@ form fieldset {
   float: left;
 }
 
-form fieldset legend {
-	font-size:1.1em; 
+legend {
+  font-family: 'Arial Rounded MT Bold';
+	font-size: 1.1em; 
 }
 
-form label { 
+label { 
+  font-family: 'Arial Narrow';
+  text-align: right; 
 	display: block;
 	float: left; 
-	width: 8em; 
+	width: 7em; 
 	padding: 0; 
 	margin: .25em .5em .25em 0;
-	text-align: right; 
 }
 
-form input, select {
-  font-family: monospace;
+input, select {
+  font-family: 'Courier New';
+  font-size: .9em;
 	width: 0em;
 	margin: .5em 0 0 0;
 }
@@ -52,9 +53,6 @@ button {
 }
 
 div.column{
-    /*
-    border-style: solid;
-    */
     float: left;
     margin-right: 10px;
 }
@@ -84,14 +82,14 @@ input.phone, select.phone {
 }
 
 input.ssWidth, select.ssWidth {
-  width: 3em;
+  width: 4em;
 }
 
 input.sWidth, select.sWidth {
-  width: 5em;
+  width: 8em;
 }
 input.mWidth, select.mWidth {
-  width: 10em;
+  width: 12em;
 }
 
 input.lWidth, select.lWidth {
