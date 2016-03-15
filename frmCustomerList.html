@@ -489,10 +489,82 @@
                 
                 <fieldset>
                     <legend>Pack-By-Man</legend>
+                    <label for="PACK_BY_MAN_ALLOW">Allow PBM</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_ALLOW" name="PACK_BY_MAN_ALLOW" data-default="1" data-dd-val="%cpp_PB.PACK_BY_MAN_ALLOW%">
+                        <option value="1" selected>Yes</option>
+                        <option value="0">No</option>
+                    </select><br>
+
+                    <label for="PACK_BY_MAN_CHG">Charging PBM</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_CHG" name="PACK_BY_MAN_CHG" data-default="yes" data-dd-val="%cpp_PB.PACK_BY_MAN_CHG%">
+                        <option value="yes" selected>Yes</option>
+                        <option value="no">No</option>
+                    </select><br>
+
+                    <label for="PACK_BY_MAN_AMT">PBM Charge</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_AMT" name="PACK_BY_MAN_AMT" data-default="5" data-dd-val="%cpp_PB.PACK_BY_MAN_AMT%">
+                        <option value="3">3.00</option>
+                        <option value="5" selected>5.00</option>
+                        <option value="0">0.00</option>
+                    </select><br>
+
+                    <label for="PACK_BY_MAN_ALWAYS">Default PBM</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_ALWAYS" name="PACK_BY_MAN_ALWAYS" data-default="0" data-dd-val="%cpp_PB.PACK_BY_MAN_ALWAYS%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="PACK_BY_MAN_SHOW_AMT_POPUP">Amt In PopUp</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_SHOW_AMT_POPUP" name="PACK_BY_MAN_SHOW_AMT_POPUP" data-default="0" data-dd-val="%cpp_PB.PACK_BY_MAN_SHOW_AMT_POPUP%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Checkout Options</legend>
+                    <div class="column">
+                        <label for="AllowShipToModify">Allow ShipTo Modify</label>
+                        <select class="ssWidth req" id="AllowShipToModify" name="AllowShipToModify" data-default="1" data-dd-val="%cpp_PB.AllowShipToModify%">
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select><br>
+                        
+                        <label for="AllowBillToFileUpdate">Allow Billing Modify</label>
+                        <select class="ssWidth req" id="AllowBillToFileUpdate" name="AllowBillToFileUpdate" data-default="1" data-dd-val="%cpp_PB.AllowBillToFileUpdate%">
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select><br>
+
+                        <label for="AllowPrivateShip">Allow Private Carrier</label>
+                        <select class="ssWidth req" id="AllowPrivateShip" name="AllowPrivateShip" data-default="3" data-dd-val="%cpp_PB.AllowPrivateShip%">
+                            <option value="2">Yes</option>
+                            <option value="3" selected>No</option>
+                        </select><br>
+
+                        <label for="AllowPickUp">Allow PickUp Options</label>
+                        <select class="ssWidth req" id="AllowPickUp" name="AllowPickUp" data-default="1" data-dd-val="%cpp_PB.AllowPickUp%">
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+
+                    <div class="column">
+                        <label for="PhoneBookCustom7">Require PO#</label>
+                        <select class="ssWidth req" id="PhoneBookCustom7" name="PhoneBookCustom7" data-default="0" data-dd-val="%cpp_PB.PhoneBookCustom7%">
+                            <option value="1">Yes</option>
+                            <option value="0" selected>No</option>
+                        </select><br>
+
+                        <label for="OtherRefCaption">OtherRef Caption</label>
+                        <input type="text" class="sWidth req" id="OtherRefCaption" value="%cpp_PB.OtherRefCaption%" name="OtherRefCaption"><br>
+
+                        <label for="OtherRefReq">Other Ref Req.</label>
+                        <select class="ssWidth req" id="OtherRefReq" name="OtherRefReq" data-default="0" data-dd-val="%cpp_PB.OtherRefReq%">
+                            <option value="1">Yes</option>
+                            <option value="0" selected>No</option>
+                        </select>
+                    </div>
                 </fieldset>
                 
                 <fieldset>
