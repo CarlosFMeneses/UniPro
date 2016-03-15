@@ -584,15 +584,67 @@
         <div class="tab" id="budgetApprovals">
             <h1>Budget &amp; Approvals</h1>
             <form>
+                <div class="column">
+                    Create new budget rules
+                </div>
+                <div class="column">
+                    <label for="UseBudgetFromAcctID">Or Use rules from Account</label>
+                    <select class="mWidth req" id="UseBudgetFromAcctID" name="UseBudgetFromAcctID" data-dd-val="%cpp_PB.UseBudgetFromAcctID%">
+                        <option value="">Select Budget From Acct</option>
+                        %cpp_DD.UseBudgetFromAcctID%
+                    </select>
+                </div>
+
+                <br>
+
                 <fieldset>
                     <legend>Required Order Approvals</legend>
                 </fieldset>
-                
+
+                <div class="column">
+                    <label for="ApproveRushOrder_Email">Req. Rush Ship Approval</label>
+                    <input type="text" class="mWidth req" id="ApproveRushOrder_Email" value="%cpp_PB.ApproveRushOrder_Email%" name="ApproveRushOrder_Email">
+                </div>
+
+                <br>
+
+                <div class="column">
+                    <label for="USE_BUDGET_RULE">Is Using New Budget And Approval</label>
+                    <select class="ssWidth req" id="USE_BUDGET_RULE" name="USE_BUDGET_RULE" data-default="no" data-dd-val="%cpp_PB.USE_BUDGET_RULE%">
+                        <option value="yes">Yes</option>
+                        <option value="no" selected>No</option>
+                    </select><br>
+
+                    <label for="SendApprovalsAsLinks">Send Approve Request As Link</label>
+                    <select class="ssWidth req" id="SendApprovalsAsLinks" name="SendApprovalsAsLinks" data-default="0" data-dd-val="%cpp_PB.SendApprovalsAsLinks%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="ReqApprVoucher">Req Approval for Vouchers</label>
+                    <select class="ssWidth req" id="ReqApprVoucher" name="ReqApprVoucher" data-default="1" data-dd-val="%cpp_PB.ReqApprVoucher%">
+                        <option value="1" selected>Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+
                 <fieldset>
                     <legend>Final Approvals</legend>
+                    <label for="OrdFinalApprovalOn">Is On</label>
+                    <select class="ssWidth req" id="OrdFinalApprovalOn" name="OrdFinalApprovalOn" data-default="n" data-dd-val="%cpp_PB.OrdFinalApprovalOn%">
+                        <option value="y">Yes</option>
+                        <option value="n" selected>No</option>
+                    </select><br>
+
+                    <label for="OrdFinalApprovalUserID">Order Approval By</label>
+                    <select class="mWidth req" id="OrdFinalApprovalUserID" name="OrdFinalApprovalUserID" data-dd-val="%cpp_PB.OrdFinalApprovalUserID%">
+                        <option value="">Select Order Approval</option>
+                        %cpp_DD.OrdFinalApprovalUserID%
+                    </select>
                 </fieldset>
             </form>
         </div>
+
         <div class="tab" id="accountProfile">
             <h1>Account Profile</h1>
             Account Profile table to come
