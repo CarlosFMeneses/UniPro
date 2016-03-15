@@ -569,6 +569,14 @@
                 
                 <fieldset>
                     <legend>A/P Settings</legend>
+                    <label for="ViewInvBalance">Allow View A/P</label>
+                    <select class="ssWidth req" id="ViewInvBalance" name="ViewInvBalance" data-default="0" data-dd-val="%cpp_PB.ViewInvBalance%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="APEmail">A/P Email Address</label>
+                    <input type="text" class="mWidth req" id="APEmail" value="%cpp_PB.APEmail%" name="APEmail">
                 </fieldset>
             </form>
         </div>
