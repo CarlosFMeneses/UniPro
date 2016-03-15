@@ -385,13 +385,13 @@
                     </button><br>
 
                     <label for="DefaultShipFromZip">Default Ship From</label>
-                    <select class="req" id="DefaultShipFromZip" name="DefaultShipFromZip" data-default="07111" data-dd-val="%cpp_PB.DefaultShipFromZip%">
+                    <select class="mWidth req" id="DefaultShipFromZip" name="DefaultShipFromZip" data-default="07111" data-dd-val="%cpp_PB.DefaultShipFromZip%">
                         <option value="07111" selected>Irvington NJ</option>
                         <option value="89431">Reno NV</option>
                     </select><br>
 
                     <label for="ShipAcct">Use Ship Acct.</label>
-                    <select class="req" id="ShipAcct" name="ShipAcct" data-default="shipacctcompany" data-dd-val="%cpp_PB.ShipAcct%">
+                    <select class="mWidth req" id="ShipAcct" name="ShipAcct" data-default="shipacctcompany" data-dd-val="%cpp_PB.ShipAcct%">
                         <option value="shipacctcompany" selected>Company</option>
                         <option value="shipacctfedex">Customer FedEx</option>
                         <option value="shipacctups">Customer UPS</option>
@@ -399,62 +399,184 @@
                     </select><br>
 
                     <label for="ShipperDefaul">Default Shipper</label>
-                    <select class="req" id="ShipperDefaul" name="ShipperDefaul" data-default="shipperfedex" data-dd-val="%cpp_PB.ShipperDefaul%">
+                    <select class="mWidth req" id="ShipperDefaul" name="ShipperDefaul" data-default="shipperfedex" data-dd-val="%cpp_PB.ShipperDefaul%">
                         <option value="shipperups">UPS</option>
                         <option value="shipperfedex" selected>FedEx</option>
                         <option value="shipperusps">USPS</option>
                     </select><br>
 
                     <label for="ShowFreeShipMsg">Free Ship Msg</label>
-                    <select class="req" id="ShowFreeShipMsg" name="ShowFreeShipMsg" data-default="0" data-dd-val="%cpp_PB.ShowFreeShipMsg%">
+                    <select class="ssWidth req" id="ShowFreeShipMsg" name="ShowFreeShipMsg" data-default="0" data-dd-val="%cpp_PB.ShowFreeShipMsg%">
                         <option value="1">Yes</option>
                         <option value="0" selected>No</option>
                         <option value="2">Hide Cust Acct</option>
                     </select><br>
 
                     <label for="FreeShippingMsg">Free Shipping Msg</label>
-                    <input type="text" class="req" id="FreeShippingMsg" value="%cpp_PB.FreeShippingMsg%" name="FreeShippingMsg">
+                    <input type="text" class="lWidth req" id="FreeShippingMsg" value="%cpp_PB.FreeShippingMsg%" name="FreeShippingMsg">
                 </fieldset>
 
                 <div>
-                    <label for="UniformProfileID">Use Profile</label>
-                    <select class="req" id="UniformProfileID" name="UniformProfileID" data-dd-val="%cpp_PB.UniformProfileID%">
+                    <label for="UniformProfileID">Use Uniform Profile</label>
+                    <select class="mWidth req" id="UniformProfileID" name="UniformProfileID" data-dd-val="%cpp_PB.UniformProfileID%">
                         <option value="">Select Profile</option>
                         %cpp_DD.UniformProfileID%
                     </select><br>
 
-                    <label for="sort_orderforms_by">sort Order</label>
-                    <input type="text" class="req" id="sort_orderforms_by" value="%cpp_PB.sort_orderforms_by%" name="sort_orderforms_by">
+                    <label for="sort_orderforms_by">Sort Order Forms</label>
+                    <input type="text" class="mWidth req" id="sort_orderforms_by" value="%cpp_PB.sort_orderforms_by%" name="sort_orderforms_by">
                 </div>
                 
                 <fieldset>
                     <legend>Other Charges</legend>
                     <label for="FreeHemming">Free Hemming</label>
-                    <select class="req" id="FreeHemming" name="FreeHemming" data-default="yes" data-dd-val="%cpp_PB.FreeHemming%">
+                    <select class="ssWidth req" id="FreeHemming" name="FreeHemming" data-default="yes" data-dd-val="%cpp_PB.FreeHemming%">
                         <option value="yes" selected>Yes</option>
                         <option value="no">No</option>
                     </select><br>
 
                     <label for="HemmingCharge">Hemming Chg</label>
-                    <input type="text" class="req" id="HemmingCharge" value="%cpp_PB.HemmingCharge%" name="HemmingCharge">
+                    <input type="text" class="sWidth req" id="HemmingCharge" value="%cpp_PB.HemmingCharge%" name="HemmingCharge">
                 </fieldset>
+
+                <div>
+                    <label for="EmailForApprovlas">Alternate Email</label>
+                    <input type="text" class="mWidth req" id="EmailForApprovlas" value="%cpp_PB.EmailForApprovlas%" name="EmailForApprovlas"><br>
+
+                    <fieldset>
+                        <legend>Custom Order Settings</legend>
+                        <label for="Default_Order_Form">Default Visible Tab</label>
+                        <select class="mWidth req" id="Default_Order_Form" name="Default_Order_Form" data-default="1" data-dd-val="%cpp_PB.Default_Order_Form%">
+                            <option value="1" selected>By Item</option>
+                            <option value="2">By Employee</option>
+                            <option value="3">By Catalog</option>
+                            <option value="4">General Catalog</option>
+                        </select>
+                    </fieldset>
+                </div>
                 
                 <br>
 
                 <fieldset>
                     <legend>Voucher Settings</legend>
+                    <label for="PickUpVoucher">Uniform Voucher</label>
+                    <select class="ssWidth req" id="PickUpVoucher" name="PickUpVoucher" data-default="0" data-dd-val="%cpp_PB.PickUpVoucher%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="VoucherToPOS">Voucher To POS</label>
+                    <select class="ssWidth req" id="VoucherToPOS" name="VoucherToPOS" data-default="1" data-dd-val="%cpp_PB.VoucherToPOS%">
+                        <option value="1" selected>Yes</option>
+                        <option value="2">No</option>
+                    </select><br>
+
+                    <label for="PickUpLocation_Default">Location</label>
+                    <select class="sWidth req" id="PickUpLocation_Default" name="PickUpLocation_Default" data-dd-val="%cpp_PB.PickUpLocation_Default%">
+                        <option value="">Select Profile</option>
+                        %cpp_DD.PickUpLocation_Default%
+                    </select><br>
+
+                    <label for="AllowSizesInVoucher">Sizes In Voucher</label>
+                    <select class="ssWidth req" id="AllowSizesInVoucher" name="AllowSizesInVoucher" data-default="1" data-dd-val="%cpp_PB.AllowSizesInVoucher%">
+                        <option value="1" selected>Yes</option>
+                        <option value="2">No</option>
+                    </select><br>
+
+                    <label for="CustPOSID">POS#</label>
+                    <input type="text" class="mWidth req" id="CustPOSID" value="%cpp_PB.CustPOSID%" name="CustPOSID"><br>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Pack-By-Man</legend>
+                    <label for="PACK_BY_MAN_ALLOW">Allow PBM</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_ALLOW" name="PACK_BY_MAN_ALLOW" data-default="1" data-dd-val="%cpp_PB.PACK_BY_MAN_ALLOW%">
+                        <option value="1" selected>Yes</option>
+                        <option value="0">No</option>
+                    </select><br>
+
+                    <label for="PACK_BY_MAN_CHG">Charging PBM</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_CHG" name="PACK_BY_MAN_CHG" data-default="yes" data-dd-val="%cpp_PB.PACK_BY_MAN_CHG%">
+                        <option value="yes" selected>Yes</option>
+                        <option value="no">No</option>
+                    </select><br>
+
+                    <label for="PACK_BY_MAN_AMT">PBM Charge</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_AMT" name="PACK_BY_MAN_AMT" data-default="5" data-dd-val="%cpp_PB.PACK_BY_MAN_AMT%">
+                        <option value="3">3.00</option>
+                        <option value="5" selected>5.00</option>
+                        <option value="0">0.00</option>
+                    </select><br>
+
+                    <label for="PACK_BY_MAN_ALWAYS">Default PBM</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_ALWAYS" name="PACK_BY_MAN_ALWAYS" data-default="0" data-dd-val="%cpp_PB.PACK_BY_MAN_ALWAYS%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="PACK_BY_MAN_SHOW_AMT_POPUP">Amt In PopUp</label>
+                    <select class="ssWidth req" id="PACK_BY_MAN_SHOW_AMT_POPUP" name="PACK_BY_MAN_SHOW_AMT_POPUP" data-default="0" data-dd-val="%cpp_PB.PACK_BY_MAN_SHOW_AMT_POPUP%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Checkout Options</legend>
+                    <div class="column">
+                        <label for="AllowShipToModify">Allow ShipTo Modify</label>
+                        <select class="ssWidth req" id="AllowShipToModify" name="AllowShipToModify" data-default="1" data-dd-val="%cpp_PB.AllowShipToModify%">
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select><br>
+                        
+                        <label for="AllowBillToFileUpdate">Allow Billing Modify</label>
+                        <select class="ssWidth req" id="AllowBillToFileUpdate" name="AllowBillToFileUpdate" data-default="1" data-dd-val="%cpp_PB.AllowBillToFileUpdate%">
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select><br>
+
+                        <label for="AllowPrivateShip">Allow Private Carrier</label>
+                        <select class="ssWidth req" id="AllowPrivateShip" name="AllowPrivateShip" data-default="3" data-dd-val="%cpp_PB.AllowPrivateShip%">
+                            <option value="2">Yes</option>
+                            <option value="3" selected>No</option>
+                        </select><br>
+
+                        <label for="AllowPickUp">Allow PickUp Options</label>
+                        <select class="ssWidth req" id="AllowPickUp" name="AllowPickUp" data-default="1" data-dd-val="%cpp_PB.AllowPickUp%">
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+
+                    <div class="column">
+                        <label for="PhoneBookCustom7">Require PO#</label>
+                        <select class="ssWidth req" id="PhoneBookCustom7" name="PhoneBookCustom7" data-default="0" data-dd-val="%cpp_PB.PhoneBookCustom7%">
+                            <option value="1">Yes</option>
+                            <option value="0" selected>No</option>
+                        </select><br>
+
+                        <label for="OtherRefCaption">OtherRef Caption</label>
+                        <input type="text" class="sWidth req" id="OtherRefCaption" value="%cpp_PB.OtherRefCaption%" name="OtherRefCaption"><br>
+
+                        <label for="OtherRefReq">Other Ref Req.</label>
+                        <select class="ssWidth req" id="OtherRefReq" name="OtherRefReq" data-default="0" data-dd-val="%cpp_PB.OtherRefReq%">
+                            <option value="1">Yes</option>
+                            <option value="0" selected>No</option>
+                        </select>
+                    </div>
                 </fieldset>
                 
                 <fieldset>
                     <legend>A/P Settings</legend>
+                    <label for="ViewInvBalance">Allow View A/P</label>
+                    <select class="ssWidth req" id="ViewInvBalance" name="ViewInvBalance" data-default="0" data-dd-val="%cpp_PB.ViewInvBalance%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="APEmail">A/P Email Address</label>
+                    <input type="text" class="mWidth req" id="APEmail" value="%cpp_PB.APEmail%" name="APEmail">
                 </fieldset>
             </form>
         </div>
