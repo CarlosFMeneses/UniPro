@@ -286,8 +286,8 @@
                         <option value="none">No</option>
                     </select><br>
 
-                    <label for="sort_orderforms_by">Require Employee</label>
-                    <select class="ssWidth req" id="sort_orderforms_by" name="sort_orderforms_by" data-default="no" data-dd-val="%cpp_PB.sort_orderforms_by%">
+                    <label for="RequireEmployeeName">Require Employee</label>
+                    <select class="ssWidth req" id="RequireEmployeeName" name="RequireEmployeeName" data-default="no" data-dd-val="%cpp_PB.RequireEmployeeName%">
                         <option value="yes" >Yes</option>
                         <option value="no" selected>No</option>
                     </select><br>
@@ -298,8 +298,8 @@
                         <option value="1">Yes</option>
                     </select><br>
 
-                    <label for="sort_orderforms_by">Require Ref Field</label>
-                    <select class="ssWidth req" id="sort_orderforms_by" name="sort_orderforms_by" data-default="2" data-dd-val="%cpp_PB.sort_orderforms_by%">
+                    <label for="ReqRefInOrderLine">Require Ref Field</label>
+                    <select class="ssWidth req" id="ReqRefInOrderLine" name="ReqRefInOrderLine" data-default="2" data-dd-val="%cpp_PB.ReqRefInOrderLine%">
                         <option value="1" >Yes</option>
                         <option value="2" selected>No</option>
                     </select><br>
@@ -584,22 +584,136 @@
         <div class="tab" id="budgetApprovals">
             <h1>Budget &amp; Approvals</h1>
             <form>
+                <div class="column">
+                    Create new budget rules
+                </div>
+                <div class="column">
+                    <label for="UseBudgetFromAcctID">Or Use rules from Account</label>
+                    <select class="mWidth req" id="UseBudgetFromAcctID" name="UseBudgetFromAcctID" data-dd-val="%cpp_PB.UseBudgetFromAcctID%">
+                        <option value="">Select Budget From Acct</option>
+                        %cpp_DD.UseBudgetFromAcctID%
+                    </select>
+                </div>
+
+                <br>
+
                 <fieldset>
                     <legend>Required Order Approvals</legend>
                 </fieldset>
-                
+
+                <div class="column">
+                    <label for="ApproveRushOrder_Email">Req. Rush Ship Approval</label>
+                    <input type="text" class="mWidth req" id="ApproveRushOrder_Email" value="%cpp_PB.ApproveRushOrder_Email%" name="ApproveRushOrder_Email">
+                </div>
+
+                <br>
+
+                <div class="column">
+                    <label for="USE_BUDGET_RULE">Is Using New Budget And Approval</label>
+                    <select class="ssWidth req" id="USE_BUDGET_RULE" name="USE_BUDGET_RULE" data-default="no" data-dd-val="%cpp_PB.USE_BUDGET_RULE%">
+                        <option value="yes">Yes</option>
+                        <option value="no" selected>No</option>
+                    </select><br>
+
+                    <label for="SendApprovalsAsLinks">Send Approve Request As Link</label>
+                    <select class="ssWidth req" id="SendApprovalsAsLinks" name="SendApprovalsAsLinks" data-default="0" data-dd-val="%cpp_PB.SendApprovalsAsLinks%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="ReqApprVoucher">Req Approval for Vouchers</label>
+                    <select class="ssWidth req" id="ReqApprVoucher" name="ReqApprVoucher" data-default="1" data-dd-val="%cpp_PB.ReqApprVoucher%">
+                        <option value="1" selected>Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+
                 <fieldset>
                     <legend>Final Approvals</legend>
+                    <label for="OrdFinalApprovalOn">Is On</label>
+                    <select class="ssWidth req" id="OrdFinalApprovalOn" name="OrdFinalApprovalOn" data-default="n" data-dd-val="%cpp_PB.OrdFinalApprovalOn%">
+                        <option value="y">Yes</option>
+                        <option value="n" selected>No</option>
+                    </select><br>
+
+                    <label for="OrdFinalApprovalUserID">Order Approval By</label>
+                    <select class="mWidth req" id="OrdFinalApprovalUserID" name="OrdFinalApprovalUserID" data-dd-val="%cpp_PB.OrdFinalApprovalUserID%">
+                        <option value="">Select Order Approval</option>
+                        %cpp_DD.OrdFinalApprovalUserID%
+                    </select>
                 </fieldset>
             </form>
         </div>
+
         <div class="tab" id="accountProfile">
             <h1>Account Profile</h1>
-            Account Profile table to come
+            <form>
+                <div>
+                <p>Account Profile table to come</p>
+                </div>
+            </form>
         </div>
         
         <div class="tab" id="systemSettings">
             <h1>System Settings</h1>
+            <form>
+                <div class="column">
+                    <label for="useCustomLogIn">Use Custom Log-In</label>
+                    <select class="ssWidth req" id="useCustomLogIn" name="useCustomLogIn" data-default="0" data-dd-val="%cpp_PB.useCustomLogIn%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select>
+
+                    <button type="button" class="req" id="cmdCustomLogIn" name="cmdCustomLogIn" tabindex="-1" onclick="alert('To come')">
+                        Custom Log-Ins
+                    </button>
+
+                    <button type="button" class="req" id="cmdUniformCode" name="cmdUniformCode" tabindex="-1" onclick="alert('To come')">
+                        Uniform Codes
+                    </button><br>
+
+                    <label for="customLogInPage">Custom Log-In Page</label>
+                    <select class="mWidth req" id="customLogInPage" name="customLogInPage" data-dd-val="%cpp_PB.customLogInPage%">
+                        <option value="">Select Log-in Page</option>
+                        %cpp_DD.customLogInPage%
+                    </select><br>
+
+                    <label for="hasLogInDomain">Has Log-In Domain</label>
+                    <input type="text" class="mWidth req" id="hasLogInDomain" value="%cpp_PB.hasLogInDomain%" name="hasLogInDomain"><br>
+
+                    <label for="AllowSelfStoreRegister">Allow Self Register</label>
+                    <select class="ssWidth req" id="AllowSelfStoreRegister" name="AllowSelfStoreRegister" data-default="0" data-dd-val="%cpp_PB.AllowSelfStoreRegister%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="useCustompagehdr">Custom Page Hdr</label>
+                    <select class="ssWidth req" id="useCustompagehdr" name="useCustompagehdr" data-default="0" data-dd-val="%cpp_PB.useCustompagehdr%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="debug_mode">Debug Mode</label>
+                    <select class="ssWidth req" id="debug_mode" name="debug_mode" data-default="0" data-dd-val="%cpp_PB.debug_mode%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select>
+                </div>
+
+                <div class="column">
+                    <label for="UseDomainEmailForOrdersApproval">Domain Email (approve)</label>
+                    <select class="ssWidth req" id="UseDomainEmailForOrdersApproval" name="UseDomainEmailForOrdersApproval" data-default="0" data-dd-val="%cpp_PB.UseDomainEmailForOrdersApproval%">
+                        <option value="1">Yes</option>
+                        <option value="0" selected>No</option>
+                    </select><br>
+
+                    <label for="PhoneBookCustom9">Corp. Menu (approve)</label>
+                    <select class="ssWidth req" id="PhoneBookCustom9" name="PhoneBookCustom9" data-default="yes" data-dd-val="%cpp_PB.PhoneBookCustom9%">
+                        <option value="yes" selected>Yes</option>
+                        <option value="no">No</option>
+                    </select><br>
+                </div>
+            </form>
         </div>
         
         <div class="tab" id="oldUserProfile">
